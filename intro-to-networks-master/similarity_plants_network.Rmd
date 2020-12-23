@@ -1,0 +1,142 @@
+---
+title: "Similiar Plants Network"
+author: "Gordon Blasco"
+date: "2/29/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Load libraries
+```{r}
+# wrangling and pre-processing
+library(tidyverse) # wrangling dplyr
+library(caret)     # use to remove 0 variance columns
+library(janitor)   # clean column names 
+library(proxy)     # for similarity matrix
+
+## networking packages
+library(tidygraph) # network analysis
+library(ggraph)    # static network plotting
+library(networkD3) # dynamic network plotting
+```
+
+
+# Load and pre process data
+```{r}
+
+enc <- readr::guess_encoding(("data/plant_tidy.csv"), n_max = 3500)[1,"encoding"] %>% 
+  as.character()
+
+plant_tidy <- read_csv("data/plant_tidy.csv",locale = readr::locale(encoding = enc)) %>% 
+  janitor::clean_names() %>% select(-x1)
+
+plant_info <- read_csv("data/plant_info.csv") %>% 
+  clean_names() %>% select(-x1) %>% 
+  left_join(plant_tidy) %>% 
+  rename(name = ndb_no) %>% 
+  mutate(name = as.character(name)) 
+
+#select zero variance columns 
+remove_cols <- nearZeroVar(plant_tidy, names = TRUE)
+
+# remove zero variance columns 
+plant_ready <- plant_tidy %>% 
+  column_to_rownames("ndb_no") %>% 
+  select(-one_of(remove_cols)) # remove the zero variance columns
+  
+```
+
+
+# Reduce dimentionality using priniciple components analysis
+### We are going to use a similarity matrix to generate our network. These tend to work better in lower dimensional space. To save us from thoughtful feature selection we are going to be lazy and run a principle components analysis. 
+
+```{r}
+# run a pca on our prepared data
+pca_plant <- prcomp(plant_ready, scale = TRUE)
+
+
+# plot it up
+screeplot(pca_plant,
+          type = "lines") # selct the first 7 principle components
+
+
+# select the prinicliple components we want
+pca_df <- pca_plant$x %>% 
+  as_tibble(rownames = NA) %>% # rownames is important for preserving our data. 
+  select("PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7") 
+```
+
+
+# Run a similarity matrix
+```{r}
+plant     <- simil(pca_df) # compute similarity between all nodes
+plant_sim <- as.matrix(plant) # create a matrix
+plant_sim[upper.tri(plant_sim, diag = TRUE)] <- 0 # reduce redundancy 
+
+
+df_sim <- plant_sim %>% 
+  as_tibble(rownames = NA) %>% # turn matrix into dataframe
+  rownames_to_column("from") %>% 
+  pivot_longer(-from, names_to = "to", values_to = "weight") %>% 
+  filter(weight != 0) %>% 
+  filter(weight > .908 & weight < .909) %>% 
+  tidygraph::as_tbl_graph(directed = FALSE, nodes = plant_info) 
+```
+
+```{r}
+
+network_test <- df_sim %>% 
+  activate(nodes) %>% 
+  left_join(plant_info)
+
+
+ggraph(network_test, layout = 'kk')+
+  geom_edge_hive(aes(alpha = scale(weight)))+
+  geom_node_point(aes(color = log(beta_carot_µg+1)))+
+  scale_color_gradient(low="blue", high="red")
+
+```
+
+
+
+```{r}
+force <- df_sim %>% 
+  select(from, to) %>% 
+  rename(
+    src = from,
+    target = to
+  ) %>% 
+  mutate(src = as.numeric(src),
+         target = as.numeric(target)) %>% 
+  left_join(plant_info, by = c("src"="ndb_no")) %>% 
+  select(-src) %>% 
+  rename(src = shrt_desc) %>% 
+  left_join(plant_info, by = c("target"="ndb_no")) %>% 
+  select(-target) %>% 
+  rename(target = shrt_desc) %>% 
+  select(src, target)
+
+simpleNetwork(force, zoom = TRUE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

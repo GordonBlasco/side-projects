@@ -1,0 +1,83 @@
+---
+title: "Shared Actor Network"
+author: "Gordon Blasco"
+date: "5/15/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Making a network graph of popular high rated movies from IMBD connected by their shared "principle" directors, producers, writers, and actors. All data from IMBD's data portal: https://www.imdb.com/interfaces/
+
+### Libraries needed
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(tidygraph)
+library(networkD3)
+library(beepr)
+```
+
+### Read in data (I could not upload these to github due to their size, so if you want to make this you will need to download the 4 data files independently)
+```{r eval=FALSE}
+# I added the name of the dataset as listed and availible for download at: https://www.imdb.com/interfaces/ 
+ratings <- read_tsv("ratings.tsv") %>% # title.ratings.tsv.gz (movie ratings)
+  rename(titleId = tconst)
+
+names <- read_tsv("name_basics.tsv") %>% # name.basics.tsv.gz (actor names)
+  select(nconst, primaryName)
+
+title_basics <- read_tsv("title_basics.tsv") %>% # title.basics.tsv.gz (movie titles & information)
+  rename(titleId = tconst)
+
+principals <- read_tsv("title_principals.tsv") %>% # title.principals.tsv.gz (actor, writer, director codes)
+  rename(titleId = tconst)
+
+beep(8) # These datasets are large and took my computer a while to read in. So, I set a beeper to go off once they are done so I could prep dinner without checking on my computer (I made wontons!)
+```
+
+### Combine datasets
+```{r eval=FALSE}
+films <- title_basics %>% 
+  filter(titleType == "movie") %>% # Remove TV shows and shorts
+  filter(startYear <= 2018) %>% # Keep movies made before 2018
+  inner_join(., ratings, by = "titleId")
+  
+
+films <- inner_join(principals, movies, key = "titleID") %>% 
+  inner_join(., names)
+
+```
+
+
+### Selecting films
+I'm interested in movies that have a rating of 8 stars or higher, were made after 2000, and that are popular enough to have at least 500 votes. 
+```{r eval=FALSE}
+selected_films <- films %>% 
+  filter(averageRating >= 8 & numVotes >= 500 & startYear >= 2000) %>% 
+  select(primaryTitle, primaryName) # Only the name of the movie and the actor will be needed going forward
+```
+
+```{r include=FALSE}
+selected_films <- read_csv("films_small.csv")
+```
+
+
+### Link films with 
+```{r}
+films1 <- selected_films # Create two copys of the dataset to combine by matching actor, writer, director
+films2 <- selected_films %>% 
+  rename(title = primaryTitle) 
+
+simple_films <- dplyr::full_join(films1, films2, by = "primaryName") 
+
+tidy_fims <- simple_films %>% 
+  filter(!primaryTitle == title) %>% # Remove films connected to themselves
+  distinct(primaryTitle, title) # Only keep unique connections, no need to have multiples of the same connection. 
+```
+
+
+```{r}
+simpleNetwork(tidy_fims, zoom = TRUE)
+```
+

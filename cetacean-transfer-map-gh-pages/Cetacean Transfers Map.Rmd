@@ -1,0 +1,158 @@
+---
+title: "Cetacean Map"
+author: "Gordon Blasco"
+output: html_document
+---
+In this project text information was parsed from a single column to make a set of origin and destination aquariums for each captured cetacean. This was then geocoded to get the latitude and longitude coordinates of each aquarium using the ggmap package and a personal google cloud API key. The flows of these cetaceans were summarized by count, and unique paths were plotted on an interactive leaflet map. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE, warning=FALSE}
+#Packages used in this project
+library(tidyverse)
+library(ggmap)
+library(geosphere)
+library(leaflet)
+library(tmap)
+library(sf)
+
+
+#API key is used to geocode (get lat and long) from google maps. API keys are sensitve so I am not uploading the raw code. Instead, I read it off of my computer as a text file.
+myAPI <- read_file("C:\\Users\\gordo_000\\Google Drive\\Working\\R analysis\\API keys\\reddish_api.txt")
+register_google(key = myAPI)
+```
+
+
+
+```{r}
+suppressMessages(
+ceta <- read_csv("captive_cetacean.csv")
+)
+ceta_simple <- ceta %>%
+  filter(region == 'US') %>% 
+  filter(transfers != 'NA')
+
+#Cut transfers column at the ' to ' in order to break destinations into different rows. 
+ceta_transfer <- ceta_simple %>% 
+  mutate(tran_cut = str_split(transfers, ' to ')) %>% 
+  unnest(tran_cut)
+ceta_transfer$tran_cut <- str_replace_all(ceta_transfer$tran_cut, "\\(.*\\)", "")
+
+#Make appropriate lengths and holding vectors to use in the for loop.
+x <- ceta_transfer
+y <- nrow(x) - 1
+x$end <- 'NA'
+
+# Create an origin and destination column 
+for (i in 1:y) {
+  if(x$id[i] == x$id[i+1]){
+  x$end[i] <- x$tran_cut[i+1]
+  } else{
+    x$end[i] = 'NA'
+  }
+}
+
+
+# Generate summarized dataframe with counts of transfers
+trans_df <- x %>% 
+  filter(end != 'NA') %>% 
+  rename(origins = tran_cut,
+         destinations = end) %>% 
+  group_by(origins, destinations) %>% 
+  summarize(counts = n()) %>% 
+  ungroup() %>% 
+  arrange(desc(counts))
+
+
+#Clean up the Data Frame (very poor data practices used on original dataset)
+ceta_final <- trans_df %>% 
+  mutate(origins = replace(origins, str_detect(origins, 'Navy'), "Naval Base Point Loma")) %>% 
+  mutate(destinations = replace(destinations, str_detect(destinations, 'Navy'), "Naval Base Point Loma")) %>%
+  mutate(origins = replace(origins, str_detect(origins, 'Pacific Ocean'), "Pacific Ocean")) %>% 
+  mutate(origins = replace(origins, str_detect(origins, 'Marineland of the Pacific'), "Marineland of the Pacific"))%>% 
+  mutate(origins = replace(origins, str_detect(origins, 'Gulf of Mexico'), "Gulf of Mexico")) %>% 
+  mutate(destinations = replace(destinations, str_detect(destinations, 'Gulf of Mexico'), "Gulf of Mexico")) %>% 
+  filter(!str_detect(origins, 'Unknown')) %>% 
+  filter(!str_detect(origins, 'unknown')) %>%
+  filter(!str_detect(destinations, 'Unknown')) %>% 
+  mutate(origins = replace(origins, str_detect(origins, 'Atlantic Ocean'), "Atlantic Ocean")) %>% 
+  mutate(origins = str_replace(origins, "Holding", "")) %>% 
+  mutate(origins = str_replace(origins, "holding", "")) %>% 
+  mutate(destinations = str_replace(destinations, "Holding", "")) %>% 
+  mutate(destinations = str_replace(destinations, "holding", "")) %>% 
+  mutate(origins = str_replace(origins, "\\?", "")) %>% 
+  mutate(destinations = str_replace(destinations, "\\?", "")) %>% 
+  mutate(origins = str_replace(origins, "\\(", "")) %>% 
+  mutate(destinations = str_replace(destinations, "\\(", "")) %>% 
+  mutate(origins = str_replace(origins, "pens, ", "")) %>% 
+  mutate(destinations = str_replace(destinations, "pens, ", "")) %>% 
+  mutate(origins = str_replace(origins, "Pens, ", "")) %>% 
+  mutate(destinations = str_replace(destinations, "Pens, ", "")) %>% 
+  mutate(origins = str_replace(origins, "^, ", "")) %>% 
+  mutate(destinations = str_replace(destinations, "^, ", "")) %>% 
+  mutate(origins = str_replace(origins, "//*", "")) %>% 
+  mutate(destinations = str_replace(destinations, "possibly", "")) %>% 
+  mutate(origins = str_replace(origins, "possibly ", "")) %>%
+  mutate(origins = str_replace(origins, "probably ", ""))
+  
+
+#Get geocodes (lat and longs) for each transfer location. This is not run durring knit because of how long it takes. Instead final data frame was saved and used for making the map. 
+#geo_df <- ceta_final
+#geo1_df <- mutate_geocode(geo_df, origins)
+#geo_df <- geo1_df %>% 
+#  rename(
+#    lat_o = lat,
+#    lon_o = lon
+#  )
+#
+#geo2_df <- mutate_geocode(geo_df, destinations)
+#geo_df <- geo2_df %>% 
+#  rename(
+#    lat_d = lat,
+#    lon_d = lon
+#  ) %>% 
+#  filter(lon_d != 'NA') %>% 
+#  filter(lon_o != 'NA')
+#
+#write_csv(geo_df, "geo_df.csv")
+
+suppressMessages(
+geo_df <- read_csv("geo_df.csv")
+)
+
+####use geospheres to make flow lines for map
+flows <- gcIntermediate(geo_df[,4:5], geo_df[,6:7], sp = TRUE, addStartEnd = TRUE, breakAtDateLine=TRUE)
+flows$counts <- geo_df$counts
+flows$origins <- geo_df$origins
+flows$destinations <- geo_df$destinations
+
+hover <- paste0(flows$origins, " to ", 
+                flows$destinations, ': ', 
+                as.character(flows$counts))
+
+
+# Generate interactive map with leaflet
+map <- leaflet(width = "100%") %>%
+  addProviderTiles('CartoDB.Positron') %>%
+  addPolylines(data = flows, weight = ~counts/9, label = hover, 
+               group = ~origins, color = 'teal') %>% 
+  setView(-98.899177, 37.773535, zoom = 3)
+
+
+
+```
+###Transfers of Cetaceans in Captivity  (1946 - 2017)
+```{r,echo=FALSE}
+map
+```
+Transfers of cetaceans in captivity are visualized with blue lines. Thicker lines denote more transfers on that route. Data is from the US National Marine Mammal Inventory (original data requested on June 15, 2015) and data from Ceta-Base (downloaded May 7, 2017). 
+
+
+```{r}
+#install.packages("htmlwidgets")
+library(htmlwidgets)
+saveWidget(map, file="m.html")
+```
+

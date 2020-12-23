@@ -1,0 +1,514 @@
+origins,destinations,counts,lon_o,lat_o,lon_d,lat_d
+Gulf of Mexico,Naval Base Point Loma,76,-90.065918,25.304304,-117.2400346,32.6889711
+Pacific Ocean,SeaWorld San Diego ,61,-124.508523,-8.783195,-117.2266083,32.7647903
+SeaWorld Aurora ,SeaWorld San Diego ,26,-81.36843999999999,41.34552,-117.2266083,32.7647903
+Florida,Marineland of Florida ,25,-81.5157535,27.6648274,-81.213398,29.6688614
+SeaWorld San Diego ,SeaWorld San Antonio ,23,-117.2266083,32.7647903,-98.69931509999999,29.4584176
+Eastern Florida,SeaWorld Orlando ,19,-80.6708733,28.169954,-81.4617047,28.4114555
+Florida Keys,Dolphin Research Center ,19,-81.5357506,25.0273356,-97.2067768,26.0781091
+SeaWorld San Diego ,SeaWorld Aurora ,18,-117.2266083,32.7647903,-81.36843999999999,41.34552
+SeaWorld San Diego ,SeaWorld Orlando ,18,-117.2266083,32.7647903,-81.4617047,28.4114555
+SeaWorld Aurora ,SeaWorld Orlando ,16,-81.36843999999999,41.34552,-81.4617047,28.4114555
+Gulf of Mexico,SeaWorld San Diego ,15,-90.065918,25.304304,-117.2266083,32.7647903
+SeaWorld Orlando ,Discovery Cove ,15,-81.4617047,28.4114555,-81.462485,28.4050098
+SeaWorld Orlando,Discovery Cove ,14,-81.4617047,28.4114555,-81.462485,28.4050098
+Busch Gardens Tampa ,SeaWorld Orlando ,13,-82.41949009999999,28.0372161,-81.4617047,28.4114555
+Marineland of the Pacific,SeaWorld San Diego ,13,-118.3980757,33.7363084,-117.2266083,32.7647903
+SeaWorld Orlando ,Busch Gardens Tampa ,13,-81.4617047,28.4114555,-82.41949009999999,28.0372161
+Discovery Cove ,SeaWorld Orlando ,12,-81.462485,28.4050098,-81.4617047,28.4114555
+Florida Keys,SeaWorld Orlando ,12,-81.5357506,25.0273356,-81.4617047,28.4114555
+Chile ,SeaWorld San Diego ,12,-71.542969,-35.675147,-117.2266083,32.7647903
+SeaWorld Orlando ,SeaWorld Aurora ,11,-81.4617047,28.4114555,-81.36843999999999,41.34552
+SeaWorld Orlando ,SeaWorld San Antonio ,10,-81.4617047,28.4114555,-98.69931509999999,29.4584176
+Straits of Magellan,Chile ,10,-70.759749,-53.58881719999999,-71.542969,-35.675147
+SeaWorld Aurora ,SeaWorld San Antonio ,9,-81.36843999999999,41.34552,-98.69931509999999,29.4584176
+SeaWorld Orlando,SeaWorld Aurora ,9,-81.4617047,28.4114555,-81.36843999999999,41.34552
+Brookfield Zoo ,Dolphin Connection ,8,-87.8357137,41.8328916,-80.9096457,24.7764696
+Florida Keys,Dolphins Plus Oceanside ,8,-81.5357506,25.0273356,-80.442206,25.0843436
+Florida Keys,Theater of the Sea ,8,-81.5357506,25.0273356,-71.5627531,41.3770733
+Gulf of Mexico,Naval Base Point Loma,8,-90.065918,25.304304,-117.2400346,32.6889711
+Gulf of Mexico,Walker's Island ,8,-90.065918,25.304304,-78.4034188,27.2599407
+Pacific Ocean,Naval Base Point Loma,8,-124.508523,-8.783195,-117.2400346,32.6889711
+SeaWorld San Antonio ,SeaWorld Orlando ,8,-98.69931509999999,29.4584176,-81.4617047,28.4114555
+Discovery Cove,SeaWorld Orlando ,7,-81.462485,28.4050098,-81.4617047,28.4114555
+Dolphin Quest Hawaii,Dolphin Quest Oahu ,7,-155.889022,19.925505,-157.773445,21.271999
+Gulf of Mexico,SeaWorld San Diego ,7,-90.065918,25.304304,-117.2266083,32.7647903
+Walker's Island ,Indianapolis Zoo ,7,-78.4034188,27.2599407,-86.18073,39.767442
+"Hudson Bay, Manitoba",SeaWorld San Diego ,7,-98.647012899999993,49.1963343,-117.2266083,32.7647903
+"Indian River, Florida",SeaWorld Orlando ,7,-80.6431877,28.2142068,-81.4617047,28.4114555
+Indianapolis Zoo ,Theater of the Sea ,7,-86.18073,39.767442,-71.5627531,41.3770733
+Miami Seaquarium ,Shedd Aquarium ,7,-80.1648518,25.7342958,-87.614038,41.8675726
+Mystic Aquarium ,Shedd Aquarium ,7,-71.9532523,41.373346,-87.614038,41.8675726
+SeaWorld San Antonio,SeaWorld San Diego ,7,-98.69931509999999,29.4584176,-117.2266083,32.7647903
+SeaWorld San Diego,Discovery Cove ,7,-117.2266083,32.7647903,-81.462485,28.4050098
+SeaWorld San Diego,SeaWorld Aurora ,7,-117.2266083,32.7647903,-81.36843999999999,41.34552
+Shedd Aquarium ,Mystic Aquarium ,7,-87.614038,41.8675726,-71.9532523,41.373346
+Theater of the Sea ,Indianapolis Zoo ,7,-71.5627531,41.3770733,-86.18073,39.767442
+Naval Base Point Loma,SeaWorld San Diego ,7,-117.2400346,32.6889711,-117.2266083,32.7647903
+Atlantic Ocean,SeaWorld Orlando ,6,-28.6731465,-14.5994134,-81.4617047,28.4114555
+Pacific Ocean,Naval Base Point Loma,6,-124.508523,-8.783195,-117.2400346,32.6889711
+Pacific Ocean,"Japan, unk. ",6,-124.508523,-8.783195,-99.1014292,40.7011879
+"Japan, unk. ",SeaWorld San Diego ,6,-99.1014292,40.7011879,-117.2266083,32.7647903
+Kamogawa Sea World ,SeaWorld San Diego ,6,140.1203229,35.115895,-117.2266083,32.7647903
+Gulf of Mexico,Mississippi ,6,-90.065918,25.304304,-89.3985283,32.3546679
+Gulf of Mexico,Naval Base Point Loma,6,-90.065918,25.304304,-117.2400346,32.6889711
+New England Aquarium ,SeaWorld Orlando ,6,-71.0497542,42.3591346,-81.4617047,28.4114555
+SeaWorld Orlando ,SeaWorld San Diego ,6,-81.4617047,28.4114555,-117.2266083,32.7647903
+SeaWorld San Antonio,SeaWorld Aurora ,6,-98.69931509999999,29.4584176,-81.36843999999999,41.34552
+Six Flags Discovery Kingdom ,Dolphinaris Arizona ,6,-122.2340155,38.13819549999999,-111.877366,33.5553703
+Discovery Cove Orlando ,Six Flags Discovery Kingdom ,5,-81.462485,28.4050098,-122.2340155,38.13819549999999
+Dolphin Quest Hawaii ,Dolphin Quest Oahu ,5,-155.889022,19.925505,-157.773445,21.271999
+Dolphins Plus Oceanside,Dolphins Plus Bayside ,5,-80.442206,25.0843436,-80.41895989999999,25.1189869
+Dolphins Plus Oceanside ,Dolphins Plus Bayside ,5,-80.442206,25.0843436,-80.41895989999999,25.1189869
+"Hudson Bay, Manitoba"," pool, Manitoba ",5,-98.647012899999993,49.1963343,-96.9789986,50.0552761
+Marine World Africa USA ,Six Flags Discovery Kingdom ,5,-122.2340155,38.13819549999999,-122.2340155,38.13819549999999
+New York Aquarium ,National Aquarium in Baltimore ,5,-73.9748754,40.5742632,-76.6082871,39.2850948
+Seattle Marine Aquarium ,SeaWorld San Diego ,5,-122.1950467,47.53140519999999,-117.2266083,32.7647903
+SeaWorld Orlando,Discovery Cove Orlando ,5,-81.4617047,28.4114555,-81.462485,28.4050098
+SeaWorld San Diego,SeaWorld Orlando ,5,-117.2266083,32.7647903,-81.4617047,28.4114555
+Pacific Ocean,Naval Base Point Loma,4,-124.508523,-8.783195,-117.2400346,32.6889711
+Discovery Cove Orlando,Dolphins Plus Bayside ,4,-81.462485,28.4050098,-80.41895989999999,25.1189869
+Dolphin Quest Oahu ,Dolphin Quest Hawaii ,4,-157.773445,21.271999,-155.889022,19.925505
+Atlantic Ocean,Marineland of the Pacific ,4,-28.6731465,-14.5994134,-118.3980757,33.7363084
+Atlantic Ocean,Naval Base Point Loma,4,-28.6731465,-14.5994134,-117.2400346,32.6889711
+Gulf of Mexico,SeaWorld San Diego ,4,-90.065918,25.304304,-117.2266083,32.7647903
+Harbor Branch Institute ,SeaWorld Orlando ,4,-80.3578694,27.5345638,-81.4617047,28.4114555
+" pool, Manitoba ",SeaWorld San Diego ,4,-96.9789986,50.0552761,-117.2266083,32.7647903
+"Hudson Bay, Manitoba",New York Aquarium ,4,-98.647012899999993,49.1963343,-73.9748754,40.5742632
+"Hudson Bay, Manitoba",Point Defiance Zoo ,4,-98.647012899999993,49.1963343,-122.5208211,47.3048779
+Indianapolis Zoo ,Texas State Aquarium ,4,-86.18073,39.767442,-97.3923171,27.8140747
+Long Marine Laboratory ,Shedd Aquarium ,4,-122.0655899,36.9496812,-87.614038,41.8675726
+Minnesota Zoo ,Brookfield Zoo ,4,-93.19667179999999,44.767807,-87.8357137,41.8328916
+National Aquarium in Baltimore ,Dolphin Research Center ,4,-76.6082871,39.2850948,-97.2067768,26.0781091
+Pacific Ocean,Long Marine Laboratory ,4,-124.508523,-8.783195,-122.0655899,36.9496812
+Point Defiance Zoo ,Shedd Aquarium ,4,-122.5208211,47.3048779,-87.614038,41.8675726
+SeaWorld Aurora,Discovery Cove ,4,-81.36843999999999,41.34552,-81.462485,28.4050098
+SeaWorld Orlando,SeaWorld San Antonio ,4,-81.4617047,28.4114555,-98.69931509999999,29.4584176
+SeaWorld Orlando,SeaWorld San Diego ,4,-81.4617047,28.4114555,-117.2266083,32.7647903
+SeaWorld San Antonio ,Texas State Aquarium ,4,-98.69931509999999,29.4584176,-97.3923171,27.8140747
+SeaWorld San Diego,Georgia Aquarium ,4,-117.2266083,32.7647903,-84.3951098,33.763382
+SeaWorld San Diego,SeaWorld San Antonio ,4,-117.2266083,32.7647903,-98.69931509999999,29.4584176
+SeaWorld San Diego,Naval Base Point Loma,4,-117.2266083,32.7647903,-117.2400346,32.6889711
+SeaWorld San Diego ,Aquatica Orlando ,4,-117.2266083,32.7647903,-81.456506,28.4157174
+Shedd Aquarium ,Miami Seaquarium ,4,-87.614038,41.8675726,-80.1648518,25.7342958
+Six Flags Discovery Kingdom,Dolphinaris Arizona ,4,-122.2340155,38.13819549999999,-111.877366,33.5553703
+Six Flags Discovery Kingdom ,Six Flags Discovery Kingdom ,4,-122.2340155,38.13819549999999,-122.2340155,38.13819549999999
+Texas State Aquarium ,Indianapolis Zoo ,4,-97.3923171,27.8140747,-86.18073,39.767442
+Texas State Aquarium ,SeaWorld San Antonio ,4,-97.3923171,27.8140747,-98.69931509999999,29.4584176
+Atlantic Ocean,SeaWorld San Diego ,3,-28.6731465,-14.5994134,-117.2266083,32.7647903
+"Avalon Beach, Florida",Harbor Branch Institute ,3,-87.1016345,30.5301956,-80.3578694,27.5345638
+Dolphin Connection ,Brookfield Zoo ,3,-80.9096457,24.7764696,-87.8357137,41.8328916
+Dolphin Quest Bermuda,Georgia Aquarium ,3,-64.832494,32.328178,-84.3951098,33.763382
+Dolphin Quest Hawaii,Georgia Aquarium ,3,-155.889022,19.925505,-84.3951098,33.763382
+Dolphin Research Center ,Brookfield Zoo ,3,-97.2067768,26.0781091,-87.8357137,41.8328916
+Florida Keys,Dolphins Plus ,3,-81.5357506,25.0273356,-80.41895989999999,25.1189869
+Atlantic Ocean,SeaWorld San Diego ,3,-28.6731465,-14.5994134,-117.2266083,32.7647903
+Georgia Aquarium ,SeaWorld San Antonio ,3,-84.3951098,33.763382,-98.69931509999999,29.4584176
+Gulf of Mexico,Marineland of Florida ,3,-90.065918,25.304304,-81.213398,29.6688614
+Gulf of Mexico,SeaWorld San Diego ,3,-90.065918,25.304304,-117.2266083,32.7647903
+ Taiji ,Kamogawa Sea World ,3,-94.21867499999999,36.391527,140.1203229,35.115895
+"Hudson Bay, Manitoba",Shedd Aquarium ,3,-98.647012899999993,49.1963343,-87.614038,41.8675726
+"Hudson Bay, Manitoba",Vancouver Aquarium ,3,-98.647012899999993,49.1963343,-123.1309293,49.3007961
+"Iceland, North Atlantic",Hafnarfjordur Aquarium ,3,-19.020835,64.963051,-84.497389,39.0946809
+Marine Animal Productions ,Dolphin Research Center ,3,-89.0187972,30.4204487,-97.2067768,26.0781091
+Marineland of Canada,SeaWorld Orlando ,3,-79.07060059999999,43.0649729,-81.4617047,28.4114555
+Marineland of the Pacific,SeaWorld San Diego ,3,-118.3980757,33.7363084,-117.2266083,32.7647903
+Milwaukee County Zoo ,Dolphin Connection ,3,-88.0409553,43.0312884,-80.9096457,24.7764696
+Gulf of Mexico,Marine Animal Productions ,3,-90.065918,25.304304,-89.0187972,30.4204487
+Montreal Aquarium ,Dolphin Research Center ,3,-73.652413,45.567919,-97.2067768,26.0781091
+National Aquarium in Baltimore ,New York Aquarium ,3,-76.6082871,39.2850948,-73.9748754,40.5742632
+National Aquarium in Baltimore ,SeaWorld Aurora ,3,-76.6082871,39.2850948,-81.36843999999999,41.34552
+New York Aquarium ,Georgia Aquarium ,3,-73.9748754,40.5742632,-84.3951098,33.763382
+New York Aquarium ,SeaWorld Orlando ,3,-73.9748754,40.5742632,-81.4617047,28.4114555
+Pacific Ocean,Marineland of the Pacific ,3,-124.508523,-8.783195,-118.3980757,33.7363084
+Point Defiance Zoo ,Marineland of the Pacific ,3,-122.5208211,47.3048779,-118.3980757,33.7363084
+Sea Life Park ,Naval Base Point Loma,3,-157.6631377,21.3131939,-117.2400346,32.6889711
+SeaWorld Orlando,Gulf World Marine Park ,3,-81.4617047,28.4114555,-85.8671863,30.2111627
+SeaWorld San Antonio,Discovery Cove ,3,-98.69931509999999,29.4584176,-81.462485,28.4050098
+SeaWorld San Antonio,SeaWorld Orlando ,3,-98.69931509999999,29.4584176,-81.4617047,28.4114555
+SeaWorld San Diego,Aquatica Orlando ,3,-117.2266083,32.7647903,-81.456506,28.4157174
+SeaWorld San Diego ,Discovery Cove ,3,-117.2266083,32.7647903,-81.462485,28.4050098
+Six Flags Discovery Kingdom ,"Compano Bay, Texas ",3,-122.2340155,38.13819549999999,-97.1036396,28.1271802
+Six Flags Over Texas ,Brookfield Zoo ,3,-97.0711714,32.7551732,-87.8357137,41.8328916
+Naval Base Point Loma,Dolphin Connection ,3,-117.2400346,32.6889711,-80.9096457,24.7764696
+Naval Base Point Loma,Sugarloaf Dolphin Sanctuary ,3,-117.2400346,32.6889711,-81.5271302,24.6583304
+Vancouver Aquarium ,SeaWorld San Diego ,3,-123.1309293,49.3007961,-117.2266083,32.7647903
+Atlantic Ocean,Marineland of the Pacific ,2,-28.6731465,-14.5994134,-118.3980757,33.7363084
+Brookfield Zoo,Minnesota Zoo ,2,-87.8357137,41.8328916,-93.19667179999999,44.767807
+Brookfield Zoo ,Minnesota Zoo ,2,-87.8357137,41.8328916,-93.19667179999999,44.767807
+Busch Gardens Tampa ,National Aquarium in Baltimore ,2,-82.41949009999999,28.0372161,-76.6082871,39.2850948
+"Chile, Straits of Magellan",Chile ,2,-70.759749,-53.58881719999999,-71.542969,-35.675147
+Clearwater Marine Aquarium ,SeaWorld Orlando ,2,-82.8191129,27.9768545,-81.4617047,28.4114555
+"Cudjoe Key, Florida",Marine Mammal Conservancy ,2,-81.4984176,24.6715318,-80.41734199999999,25.122698
+Discovery Cove Orlando ,SeaWorld San Diego ,2,-81.462485,28.4050098,-117.2266083,32.7647903
+Dolfinarium Harderwijk ,SeaWorld San Diego ,2,5.6171798,52.3541391,-117.2266083,32.7647903
+Dolphin Connection,Brookfield Zoo ,2,-80.9096457,24.7764696,-87.8357137,41.8328916
+Dolphin Connection ,Lisbon Zoo ,2,-80.9096457,24.7764696,-9.1707172,38.7443615
+Dolphin Connection ,Milwaukee County Zoo ,2,-80.9096457,24.7764696,-88.0409553,43.0312884
+Dolphin Connection ,Mirage Dolphin Habitat ,2,-80.9096457,24.7764696,-115.1784079,36.1203291
+Dolphin Quest Bermuda,Brookfield Zoo ,2,-64.832494,32.328178,-87.8357137,41.8328916
+Dolphin Quest Bermuda,Dolphin Quest Hawaii ,2,-64.832494,32.328178,-155.889022,19.925505
+Dolphin Quest Hawai'i,Dolphinaris Arizona ,2,-155.889022,19.925505,-111.877366,33.5553703
+Dolphin Quest Hawaii ,Dolphin Quest Hawaii ,2,-155.889022,19.925505,-155.889022,19.925505
+Dolphin Quest Hawaii ,Georgia Aquarium ,2,-155.889022,19.925505,-84.3951098,33.763382
+Dolphin Quest Oahu , Dolphinaris Arizona ,2,-157.773445,21.271999,-111.877366,33.5553703
+Dolphin Quest Oahu ,Dolphinaris Arizona ,2,-157.773445,21.271999,-111.877366,33.5553703
+Dolphin Research Center ,National Aquarium in Baltimore ,2,-97.2067768,26.0781091,-76.6082871,39.2850948
+Dolphin Research Center ,New England Aquarium ,2,-97.2067768,26.0781091,-71.0497542,42.3591346
+Dolphin Research Center ,University of Guelph ,2,-97.2067768,26.0781091,-80.2262444,43.5328929
+Dolphins Plus Bayside ,Dolphins Plus Oceanside ,2,-80.41895989999999,25.1189869,-80.442206,25.0843436
+Duisburg Zoo ,SeaWorld San Diego ,2,6.8061729,51.4362611,-117.2266083,32.7647903
+Florida,Miami Seaquarium ,2,-81.5157535,27.6648274,-80.1648518,25.7342958
+Florida Keys,Dolphin Connection ,2,-81.5357506,25.0273356,-80.9096457,24.7764696
+Atlantic Ocean,Marineland of Florida ,2,-28.6731465,-14.5994134,-81.213398,29.6688614
+Atlantic Ocean,Miami Seaquarium ,2,-28.6731465,-14.5994134,-80.1648518,25.7342958
+Atlantic Ocean,Point Defiance Zoo ,2,-28.6731465,-14.5994134,-122.5208211,47.3048779
+Georgia Aquarium ,Marineland of Florida ,2,-84.3951098,33.763382,-81.213398,29.6688614
+Georgia Aquarium ,Shedd Aquarium ,2,-84.3951098,33.763382,-87.614038,41.8675726
+Gulf of California,SeaWorld San Diego ,2,-110.7122465,26.7312935,-117.2266083,32.7647903
+Gulf World Marine Park,Gulfarium ,2,-85.8671863,30.2111627,-86.593546,30.394468
+Gulf World Marine Park ,Gulfarium ,2,-85.8671863,30.2111627,-86.593546,30.394468
+"Hudson Bay, Manitoba",SeaWorld San Antonio ,2,-98.647012899999993,49.1963343,-98.69931509999999,29.4584176
+"Hudson Bay, Manitoba",Naval Base Point Loma,2,-98.647012899999993,49.1963343,-117.2400346,32.6889711
+"Japan, Hatakejiriwan", Taiji ,2,138.252924,36.204824,-94.21867499999999,36.391527
+Pacific Ocean,Kamogawa Sea World ,2,-124.508523,-8.783195,140.1203229,35.115895
+Lisbon Zoo ,Brookfield Zoo ,2,-9.1707172,38.7443615,-87.8357137,41.8328916
+Long Marine Laboratory ,Dolphin Research Center ,2,-122.0655899,36.9496812,-97.2067768,26.0781091
+Marine Mammal Conservancy ,SeaWorld Orlando ,2,-80.41734199999999,25.122698,-81.4617047,28.4114555
+Marineland of Canada ,SeaWorld San Diego ,2,-79.07060059999999,43.0649729,-117.2266083,32.7647903
+Marineland of Florida,SeaWorld Orlando ,2,-81.213398,29.6688614,-81.4617047,28.4114555
+Marineland of Florida ,SeaWorld Orlando ,2,-81.213398,29.6688614,-81.4617047,28.4114555
+Marineland of the Pacific,Marineland of Florida ,2,-118.3980757,33.7363084,-81.213398,29.6688614
+Miami Seaquarium ,Brookfield Zoo ,2,-80.1648518,25.7342958,-87.8357137,41.8328916
+Mote Marine Laboratory ,Clearwater Marine Aquarium ,2,-82.57747379999999,27.3328279,-82.8191129,27.9768545
+Mystic Aquarium ,Miami Seaquarium ,2,-71.9532523,41.373346,-80.1648518,25.7342958
+Mystic Aquarium ,New York Aquarium ,2,-71.9532523,41.373346,-73.9748754,40.5742632
+National Aquarium in Baltimore ,SeaWorld San Antonio ,2,-76.6082871,39.2850948,-98.69931509999999,29.4584176
+New England Aquarium ,Dolphin Research Center ,2,-71.0497542,42.3591346,-97.2067768,26.0781091
+New England Aquarium ,Naval Base Point Loma,2,-71.0497542,42.3591346,-117.2400346,32.6889711
+Pacific Ocean,Steinhart Aquarium ,2,-124.508523,-8.783195,-122.466105,37.7698293
+Pacific Ocean,Naval Base Point Loma,2,-124.508523,-8.783195,-117.2400346,32.6889711
+"Puget Sound, Pacific NW",Seattle Marine Aquarium ,2,-122.4713352,47.7236535,-122.1950467,47.53140519999999
+"Sanibel Island, Florida",Mote Marine Laboratory ,2,-82.1115119,26.4433972,-82.57747379999999,27.3328279
+Sea Life Park,Dolphin Quest Oahu ,2,-157.6631377,21.3131939,-157.773445,21.271999
+SeaWorld Aurora ,Discovery Cove ,2,-81.36843999999999,41.34552,-81.462485,28.4050098
+SeaWorld Orlando,Mirage Dolphin Habitat ,2,-81.4617047,28.4114555,-115.1784079,36.1203291
+SeaWorld Orlando ,Discovery Cove Orlando ,2,-81.4617047,28.4114555,-81.462485,28.4050098
+SeaWorld Orlando ,Georgia Aquarium ,2,-81.4617047,28.4114555,-84.3951098,33.763382
+SeaWorld Orlando ,Gulf World Marine Park ,2,-81.4617047,28.4114555,-85.8671863,30.2111627
+SeaWorld Orlando ,Texas State Aquarium ,2,-81.4617047,28.4114555,-97.3923171,27.8140747
+SeaWorld Orlando ,Theater of the Sea ,2,-81.4617047,28.4114555,-71.5627531,41.3770733
+SeaWorld San Antonio,Georgia Aquarium ,2,-98.69931509999999,29.4584176,-84.3951098,33.763382
+SeaWorld San Antonio,Six Flags Discovery Kingdom ,2,-98.69931509999999,29.4584176,-122.2340155,38.13819549999999
+SeaWorld San Antonio ,Georgia Aquarium ,2,-98.69931509999999,29.4584176,-84.3951098,33.763382
+SeaWorld San Antonio ,SeaWorld San Diego ,2,-98.69931509999999,29.4584176,-117.2266083,32.7647903
+SeaWorld San Diego,New England Aquarium ,2,-117.2266083,32.7647903,-71.0497542,42.3591346
+SeaWorld San Diego ,Naval Base Point Loma,2,-117.2266083,32.7647903,-117.2400346,32.6889711
+SeaWorld San Diego ,SeaWorld Orlando ,2,-117.2266083,32.7647903,-81.4617047,28.4114555
+Shedd Aquarium,Mystic Aquarium ,2,-87.614038,41.8675726,-71.9532523,41.373346
+Six Flags Great Adventure ,Six Flags Discovery Kingdom ,2,-74.4402149,40.1370678,-122.2340155,38.13819549999999
+Steinhart Aquarium ,SeaWorld San Antonio ,2,-122.466105,37.7698293,-98.69931509999999,29.4584176
+Gulf of Mexico,Quinlan Marine Attractions ,2,-90.065918,25.304304,-96.13552949999999,32.9103998
+TMMSN Galveston ,SeaWorld San Antonio ,2,-94.8139686,29.2758286,-98.69931509999999,29.4584176
+Naval Base Point Loma,New England Aquarium ,2,-117.2400346,32.6889711,-71.0497542,42.3591346
+Naval Base Point Loma,Gulfarium ,2,-117.2400346,32.6889711,-86.593546,30.394468
+Naval Base Point Loma,Inst. of Marine Mammal Studies ,2,-117.2400346,32.6889711,-89.0187972,30.4204487
+Naval Base Point Loma,Long Marine Laboratory ,2,-117.2400346,32.6889711,-122.0655899,36.9496812
+Naval Base Point Loma,SeaWorld San Diego ,2,-117.2400346,32.6889711,-117.2266083,32.7647903
+UNEXSO Dolphin Experience,Georgia Aquarium ,2,-78.641042,26.514078,-84.3951098,33.763382
+University of Guelph ,New England Aquarium ,2,-80.2262444,43.5328929,-71.0497542,42.3591346
+"Amazon River, Peru",Marineland of Florida ,1,-60.6646509,-3.2996216,-81.213398,29.6688614
+Aquarium of Niagara Falls ,Marineland of the Pacific ,1,-79.060138,43.09431,-118.3980757,33.7363084
+Aquarium of Niagara Falls ,New England Aquarium ,1,-79.060138,43.09431,-71.0497542,42.3591346
+Argentina,Duisburg Zoo ,1,-63.61667199999999,-38.416097,6.8061729,51.4362611
+Audubon Aquarium ,Dolphin Research Center ,1,-90.06293869999999,29.950508,-97.2067768,26.0781091
+Audubon Aquarium ,Inst. of Marine Mammal Studies ,1,-90.06293869999999,29.950508,-89.0187972,30.4204487
+"Bolivar Peninsula, Texas",Texas Marine Mammal Stranding Network ,1,-94.5799145,29.4782878,-94.8139686,29.2758286
+Brookfield Zoo,Dolphin Connection ,1,-87.8357137,41.8328916,-80.9096457,24.7764696
+Brookfield Zoo ,EPCOT Center ,1,-87.8357137,41.8328916,-81.549404,28.374694
+Brookfield Zoo ,Texas State Aquarium ,1,-87.8357137,41.8328916,-97.3923171,27.8140747
+"Bullfrog Creek, Florida",Clearwater Marine Aquarium ,1,-82.3502403,27.7947922,-82.8191129,27.9768545
+Busch Gardens Tampa ,Discovery Cove ,1,-82.41949009999999,28.0372161,-81.462485,28.4050098
+Busch Gardens Tampa ,Dolphin Connection ,1,-82.41949009999999,28.0372161,-80.9096457,24.7764696
+Carr Inlet,Seattle Marine Aquarium ,1,-122.7026778,47.2665812,-122.1950467,47.53140519999999
+Cedar Point ,Dolphin Research Center ,1,-82.6835206,41.482207,-97.2067768,26.0781091
+"Churchill Oaks, Louisiana",Audubon Aquarium ,1,-86.247351,30.3888707,-90.06293869999999,29.950508
+"Clearwater Beach, Florida",Clearwater Marine Aquarium ,1,-82.8285877,27.972065,-82.8191129,27.9768545
+Clearwater Marine Aquarium ,Dolphin Research Center ,1,-82.8191129,27.9768545,-97.2067768,26.0781091
+"Corpus Christi, Texas","Texas State Aquarium, Sea Lab ",1,-97.39638099999999,27.8005828,-97.3923171,27.8140747
+"Curacao, Caribbean",Dolphin Academy ,1,-68.99002,12.16957,-82.1229824,33.5234437
+Dinnes ,SeaWorld Orlando ,1,16.3707771,48.2102027,-81.4617047,28.4114555
+"Dinnes, Dolphin Connection ",Mirage Dolphin Habitat ,1,-80.9096457,24.7764696,-115.1784079,36.1203291
+"Dinnes, possibly Dolphin Connection ",Milwaukee County Zoo ,1,-80.9096457,24.7764696,-88.0409553,43.0312884
+"Dinnes, probably Dolphin Connection ",Mirage Dolphin Habitat ,1,-80.9096457,24.7764696,-115.1784079,36.1203291
+Discovery Cove ,Discovery Cove ,1,-81.462485,28.4050098,-81.462485,28.4050098
+Discovery Cove Orlando,SeaWorld Orlando ,1,-81.462485,28.4050098,-81.4617047,28.4114555
+Discovery Cove Orlando ,SeaWorld San Antonio ,1,-81.462485,28.4050098,-98.69931509999999,29.4584176
+Dolfinarium Harderwijk ,SeaWorld Orlando ,1,5.6171798,52.3541391,-81.4617047,28.4114555
+Dolfinarium Harderwijk ,Windsor Safari Park ,1,5.6171798,52.3541391,-0.6187676999999999,51.4667179
+Dolfinarium Harderwijk  ,SeaWorld Orlando ,1,5.6171798,52.3541391,-81.4617047,28.4114555
+Dolphin Academy ,SeaWorld San Diego ,1,-82.1229824,33.5234437,-117.2266083,32.7647903
+Dolphin Connection,Dolphin Quest Bermuda ,1,-80.9096457,24.7764696,-64.832494,32.328178
+Dolphin Connection ,EPCOT Center ,1,-80.9096457,24.7764696,-81.549404,28.374694
+Dolphin Connection ,Minnesota Zoo ,1,-80.9096457,24.7764696,-93.19667179999999,44.767807
+Dolphin Connection ,SeaWorld Orlando ,1,-80.9096457,24.7764696,-81.4617047,28.4114555
+Dolphin Quest Bermuda,EPCOT Center ,1,-64.832494,32.328178,-81.549404,28.374694
+Dolphin Quest Bermuda ,EPCOT Center ,1,-64.832494,32.328178,-81.549404,28.374694
+Dolphin Quest Hawai'I ,Dolphin Quest Oahu ,1,-155.889022,19.925505,-157.773445,21.271999
+Dolphin Quest Oahu ,Dolphin Quest Hawai'I ,1,-157.773445,21.271999,-155.889022,19.925505
+Dolphin Research Center ,Montreal Aquarium ,1,-97.2067768,26.0781091,-73.652413,45.567919
+Dolphin Research Center ,New York Aquarium ,1,-97.2067768,26.0781091,-73.9748754,40.5742632
+Dolphin Research Center ,Theater of the Sea ,1,-97.2067768,26.0781091,-71.5627531,41.3770733
+"Dolphin Resort, Dominica ",Dolphins Plus Oceanside ,1,-61.4403695,15.4362912,-80.442206,25.0843436
+Dolphins Plus ,Dolphins Plus Bayside ,1,-80.41895989999999,25.1189869,-80.41895989999999,25.1189869
+Dolphins Plus Bayside,Dolphins Plus ,1,-80.41895989999999,25.1189869,-80.41895989999999,25.1189869
+Dolphins Plus Bayside,Dolphins Plus Oceanside ,1,-80.41895989999999,25.1189869,-80.442206,25.0843436
+Dolphins Plus Bayside ,Theater of the Sea ,1,-80.41895989999999,25.1189869,-71.5627531,41.3770733
+Dolphins Plus Oceanside ,"Prospect Reef Resort, Tortola ",1,-80.442206,25.0843436,-64.63327819999999,18.4334704
+EPCOT Center ,Naval Base Point Loma,1,-81.549404,28.374694,-117.2400346,32.6889711
+EPCOT Living Seas ,Naval Base Point Loma,1,-81.5507341,28.3748884,-117.2400346,32.6889711
+Florida Keys,Dolphin Research Center ,1,-81.5357506,25.0273356,-97.2067768,26.0781091
+Florida Keys,"MARS, Keys Marine Lab ",1,-81.5357506,25.0273356,-80.8139384,24.8263277
+Florida Keys,Miami Seaquarium ,1,-81.5357506,25.0273356,-80.1648518,25.7342958
+Florida Keys,to SeaWorld Orlando ,1,-81.5357506,25.0273356,-81.4617047,28.4114555
+Florida Keys ,Dolphin Research Center ,1,-81.5357506,25.0273356,-97.2067768,26.0781091
+Florida Keys ,Florida Keys ,1,-81.5357506,25.0273356,-81.5357506,25.0273356
+Florida Keys ,Naval Base Point Loma,1,-81.5357506,25.0273356,-117.2400346,32.6889711
+"Florida Keys, Escape ","Florida Keys, Re-Capture ",1,-80.4325362,25.1026784,-80.13332900000002,26.211606
+"Florida Keys, Re-Capture ",Sugarloaf Dolphin Sanctuary ,1,-80.13332900000002,26.211606,-81.5271302,24.6583304
+Atlantic Ocean,Dolphin Research Center ,1,-28.6731465,-14.5994134,-97.2067768,26.0781091
+Atlantic Ocean,Ocean World Ft Lauderdale ,1,-28.6731465,-14.5994134,-80.0949493,26.2033943
+Atlantic Ocean,Shark World/Aquatarium ,1,-28.6731465,-14.5994134,-75.6826741,44.5876895
+Atlantic Ocean,Naval Base Point Loma,1,-28.6731465,-14.5994134,-117.2400346,32.6889711
+Atlantic Ocean,Naval Base Point Loma,1,-28.6731465,-14.5994134,-117.2400346,32.6889711
+Atlantic Ocean,Marineland of Florida ,1,-28.6731465,-14.5994134,-81.213398,29.6688614
+"Florida, Gulf Coast","Private owner, Punta Gorda ",1,-81.7733903,26.4643209,-82.0453664,26.9297836
+"Florida, Gulf Coast",Marine Animal Productions ,1,-81.7733903,26.4643209,-89.0187972,30.4204487
+Gulf of Mexico,Gulf World Marine Park ,1,-90.065918,25.304304,-85.8671863,30.2111627
+Gulf of Mexico,Mississippi ,1,-90.065918,25.304304,-89.3985283,32.3546679
+Florida,Theater of the Sea ,1,-81.5157535,27.6648274,-71.5627531,41.3770733
+"Fort Pierce, Florida ","Fort Pierce, Florida ",1,-80.3256056,27.4467056,-80.3256056,27.4467056
+"Fort Pierce, Florida ",Marine Mammal Conservancy ,1,-80.3256056,27.4467056,-80.41734199999999,25.122698
+"Fourchon Beach, Louisiana",Audubon Aquarium ,1,-90.1812288,29.1081231,-90.06293869999999,29.950508
+Gulf of Mexico,Dolphin Connection ,1,-90.065918,25.304304,-80.9096457,24.7764696
+Gulf of Mexico,SeaWorld San Diego ,1,-90.065918,25.304304,-117.2266083,32.7647903
+"Gulf Shores, Alabama",Inst. of Marine Mammal Studies ,1,-87.70081929999999,30.2460361,-89.0187972,30.4204487
+Gulf World Marine Park ,Clearwater Marine Aquarium ,1,-85.8671863,30.2111627,-82.8191129,27.9768545
+Gulf World Marine Park ,Dolphin Research Center ,1,-85.8671863,30.2111627,-97.2067768,26.0781091
+Gulf World Marine Park ,Marineland of Florida ,1,-85.8671863,30.2111627,-81.213398,29.6688614
+Gulf World Marine Park ,Mirage Dolphin Habitat ,1,-85.8671863,30.2111627,-115.1784079,36.1203291
+Gulfarium ,Gulf World Marine Park ,1,-86.593546,30.394468,-85.8671863,30.2111627
+Gulfarium Marine Adventure,Six Flags Discovery Kingdom ,1,-86.593546,30.394468,-122.2340155,38.13819549999999
+Gulfarium Marine Adventure Park,Gulf World Marine Park ,1,-86.593546,30.394468,-85.8671863,30.2111627
+Hafnarfjordur Aquarium ,Sao Paulo Playcenter ,1,-84.497389,39.0946809,-46.5044526,-23.5660883
+Hafnarfjordur Aquarium ,SeaWorld San Diego ,1,-84.497389,39.0946809,-117.2266083,32.7647903
+Pacific Ocean,Sea Life Park ,1,-124.508523,-8.783195,-157.6631377,21.3131939
+" facility, Japan ",SeaWorld San Diego ,1,138.252924,36.204824,-117.2266083,32.7647903
+ Pedder Bay ,Marineland of Canada ,1,-123.5779913,48.349479,-79.07060059999999,43.0649729
+" pool, Manitoba ",New York Aquarium ,1,-96.9789986,50.0552761,-73.9748754,40.5742632
+Florida ,New York Aquarium ,1,-81.5157535,27.6648274,-73.9748754,40.5742632
+Iceland ,Vancouver Aquarium ,1,-19.020835,64.963051,-123.1309293,49.3007961
+Japan ,Indianapolis Zoo ,1,138.252924,36.204824,-86.18073,39.767442
+Taiji ,Indianapolis Zoo ,1,-94.21867499999999,36.391527,-86.18073,39.767442
+"Hudson Bay, Manitoba",Duisburg Zoo ,1,-98.647012899999993,49.1963343,6.8061729,51.4362611
+"Hudson Bay, Manitoba",Seattle Aquarium ,1,-98.647012899999993,49.1963343,-122.3429996,47.607445
+"Hudson Bay, Manitoba",Naval Base Point Loma,1,-98.647012899999993,49.1963343,-117.2400346,32.6889711
+"Hull Aquarium, Mass. ",Theater of the Sea ,1,-70.88033209999999,42.1984989,-71.5627531,41.3770733
+Iceland,"Sea Pen, Grindavik Harbor ",1,-19.020835,64.963051,-22.4383818,63.8441808
+"Iceland, North Atlantic",Iceland ,1,-19.020835,64.963051,-19.020835,64.963051
+"Indian River Lagoon, Florida",Clearwater Marine Aquarium ,1,-80.5761641,28.0552946,-82.8191129,27.9768545
+"Indian Rocks Beach, Florida",Mote Marine Laboratory ,1,-82.84656100000001,27.8960019,-82.57747379999999,27.3328279
+Indianapolis Zoo ,John G. Shedd Aquarium ,1,-86.18073,39.767442,-87.614038,41.8675726
+Indianapolis Zoo ,SeaWorld Orlando ,1,-86.18073,39.767442,-81.4617047,28.4114555
+Indianapolis Zoo ,Shedd Aquarium ,1,-86.18073,39.767442,-87.614038,41.8675726
+Inst. of Marine Mammal Studies ,Naval Base Point Loma,1,-89.0187972,30.4204487,-117.2400346,32.6889711
+"Jacksonville, Florida",Gulf World Marine Park ,1,-81.65565099999999,30.3321838,-85.8671863,30.2111627
+Pacific Ocean," facility, Japan ",1,-124.508523,-8.783195,138.252924,36.204824
+Pacific Ocean, Taiji ,1,-124.508523,-8.783195,-94.21867499999999,36.391527
+Pacific Ocean,Japan ,1,-124.508523,-8.783195,138.252924,36.204824
+Japanese Deer Park ,Seven Seas Texas ,1,-118.0113017,33.8730709,-94.9855302,29.174943
+John G. Shedd Aquarium ,Indianapolis Zoo ,1,-87.614038,41.8675726,-86.18073,39.767442
+"Kahala Hilton, Pre-Dolphin Quest",Dolphin Quest Hawaii ,1,-157.773445,21.271999,-155.889022,19.925505
+Kahala Oriental Hotel ,Sea Life Park ,1,-157.773651,21.271847,-157.6631377,21.3131939
+Key Largo Porpoise Pens ,Theater of the Sea ,1,-80.41895989999999,25.1189869,-71.5627531,41.3770733
+Key West,"Sea World, Long Key ",1,-81.7799871,24.5550593,-81.4617047,28.4114555
+La Feria de Chapultapec ,Georgia Aquarium ,1,-99.19622749999999,19.4146944,-84.3951098,33.763382
+La Feria de Chapultepec ,Georgia Aquarium ,1,-99.19622749999999,19.4146944,-84.3951098,33.763382
+Los Angeles Zoo* ,Naval Base Point Loma,1,-118.2838126,34.149869700000004,-117.2400346,32.6889711
+Lower Matecumbe Key,Dolphin Research Center ,1,-80.7145116,24.865281,-97.2067768,26.0781091
+Marine Animal Productions ,Aquarium of Niagara Falls ,1,-89.0187972,30.4204487,-79.060138,43.09431
+Marine Animal Productions ,Marine World Africa USA ,1,-89.0187972,30.4204487,-122.2340155,38.13819549999999
+Marine Animal Productions ,Theater of the Sea ,1,-89.0187972,30.4204487,-71.5627531,41.3770733
+Marine Mammal Conservancy ,Dolphins Plus ,1,-80.41734199999999,25.122698,-80.41895989999999,25.1189869
+Marine World Africa USA ,Marineland of the Pacific ,1,-122.2340155,38.13819549999999,-118.3980757,33.7363084
+Marineland Antibes,Six Flags Great Adventure ,1,7.1267891,43.6145842,-74.4402149,40.1370678
+Marineland of Canada,SeaWorld San Diego ,1,-79.07060059999999,43.0649729,-117.2266083,32.7647903
+Marineland of Canada ,SeaWorld Orlando ,1,-79.07060059999999,43.0649729,-81.4617047,28.4114555
+Marineland of Florida,Georgia Aquarium ,1,-81.213398,29.6688614,-84.3951098,33.763382
+Marineland of Florida ,Florida,1,-81.213398,29.6688614,-81.5157535,27.6648274
+Marineland of the Pacific,Six Flags Discovery Kingdom ,1,-118.3980757,33.7363084,-122.2340155,38.13819549999999
+Marineland of the Pacific,Marineland of Florida ,1,-118.3980757,33.7363084,-81.213398,29.6688614
+"MARS, Keys Marine Lab ",Theater of the Sea ,1,-80.8139384,24.8263277,-71.5627531,41.3770733
+"Matagorda Island, Texas",Texas MM Stranding Network ,1,-96.7386946,28.1688928,-94.8139686,29.2758286
+"Melbourne Beach, Florida",SeaWorld Orlando ,1,-80.56033029999999,28.0683496,-81.4617047,28.4114555
+Miami Seaquarium ,Cedar Point ,1,-80.1648518,25.7342958,-82.6835206,41.482207
+Minnesota Zoo,Brookfield Zoo ,1,-93.19667179999999,44.767807,-87.8357137,41.8328916
+Minnesota Zoo,SeaWorld Aurora ,1,-93.19667179999999,44.767807,-81.36843999999999,41.34552
+Minnesota Zoo ,National Aquarium in Baltimore ,1,-93.19667179999999,44.767807,-76.6082871,39.2850948
+Minnesota Zoo ,Six Flags Discovery Kingdom ,1,-93.19667179999999,44.767807,-122.2340155,38.13819549999999
+Mirage Dolphin Habitat ,SeaWorld San Diego ,1,-115.1784079,36.1203291,-117.2266083,32.7647903
+Gulf of Mexico,Audubon Zoo ,1,-90.065918,25.304304,-90.12797429999999,29.9272846
+Gulf of Mexico,"Dinnes, Dolphin Connection ",1,-90.065918,25.304304,-80.9096457,24.7764696
+Gulf of Mexico,Quinlan Marine Attractions ,1,-90.065918,25.304304,-96.13552949999999,32.9103998
+Montreal Aquarium ,New England Aquarium ,1,-73.652413,45.567919,-71.0497542,42.3591346
+"Moriya coast, Japan",Kamogawa Sea World ,1,140.2618308,35.1393707,140.1203229,35.115895
+"Mosquito Lagoon, Florida",Clearwater Marine Aquarium ,1,-80.7990185,28.8361255,-82.8191129,27.9768545
+Mote Marine Laboratory ,"Fort Pierce, Florida ",1,-82.57747379999999,27.3328279,-80.3256056,27.4467056
+Mote Marine Laboratory ,Indianapolis Zoo ,1,-82.57747379999999,27.3328279,-86.18073,39.767442
+Mustang Island,Texas State Aquarium ,1,-97.1628647,27.7103944,-97.3923171,27.8140747
+Mystic Aquarium ,Aquarium of Niagara Falls ,1,-71.9532523,41.373346,-79.060138,43.09431
+"Napa River, Peru",Marineland of Florida ,1,-74.7033405,-1.7987157,-81.213398,29.6688614
+National Aquarium,Texas State Aquarium ,1,-76.6082871,39.2850948,-97.3923171,27.8140747
+National Aquarium in Baltimore ,Brookfield Zoo ,1,-76.6082871,39.2850948,-87.8357137,41.8328916
+National Aquarium in Baltimore ,Dolphin Connection ,1,-76.6082871,39.2850948,-80.9096457,24.7764696
+National Aquarium in Baltimore ,Texas State Aquarium ,1,-76.6082871,39.2850948,-97.3923171,27.8140747
+Near Key West ,Florida Keys ,1,-81.7799871,24.5550593,-81.5357506,25.0273356
+New England Aquarium,SeaWorld Orlando ,1,-71.0497542,42.3591346,-81.4617047,28.4114555
+New England Aquarium ,Brookfield Zoo ,1,-71.0497542,42.3591346,-87.8357137,41.8328916
+New England Aquarium ,SeaWorld ,1,-71.0497542,42.3591346,-98.69931509999999,29.4584176
+New York Aquarium,Mystic Aquarium ,1,-73.9748754,40.5742632,-71.9532523,41.373346
+New York Aquarium ,Dolphin Research Center ,1,-73.9748754,40.5742632,-97.2067768,26.0781091
+New York Aquarium ,Mystic Aquarium ,1,-73.9748754,40.5742632,-71.9532523,41.373346
+New York Aquarium ,SeaWorld San Diego ,1,-73.9748754,40.5742632,-117.2266083,32.7647903
+Ocean Park Hong Kong ,Naval Base Point Loma,1,114.1757239,22.2466607,-117.2400346,32.6889711
+Ocean Reef Club ,"Florida Keys, Escape ",1,-74.6029956,39.2696503,-80.4325362,25.1026784
+Ocean Reef Club ,Ocean Reef Club ,1,-74.6029956,39.2696503,-74.6029956,39.2696503
+Ocean World Ft Lauderdale ,Dolphin Research Center ,1,-80.0949493,26.2033943,-97.2067768,26.0781091
+"Okhotsk Sea, Russia",Utrish ,1,149.3658173,52.87362299999999,37.3864462,44.7597663
+Pacific Ocean,Los Angeles Zoo* ,1,-124.508523,-8.783195,-118.2838126,34.149869700000004
+Pacific Ocean,Marineland of the Pacific ,1,-124.508523,-8.783195,-118.3980757,33.7363084
+"Panama City, Florida",Gulf World Marine Park ,1,-85.6602058,30.1588129,-85.8671863,30.2111627
+"Pedder Bay, BC",Pedder Bay  pen ,1,-123.5779913,48.349479,-123.5779913,48.349479
+"Pedder Bay, British Columbia", Pedder Bay ,1,-123.5779913,48.349479,-123.5779913,48.349479
+"Pender Harbor, BC",Marineland of the Pacific ,1,-124.0437555,49.635314,-118.3980757,33.7363084
+Point Defiance Zoo ,SeaWorld San Antonio ,1,-122.5208211,47.3048779,-98.69931509999999,29.4584176
+Point Defiance Zoo ,SeaWorld San Diego ,1,-122.5208211,47.3048779,-117.2266083,32.7647903
+"Ponce Inlet, Florida",Harbor Branch Institute ,1,-80.9369983,29.0963729,-80.3578694,27.5345638
+"Port Isabel, Texas",UT Pan-Am Coastal Studies Lab ,1,-97.2085844,26.0734119,-97.15857109999999,26.0752042
+"Private owner, Punta Gorda ",Key Largo Porpoise Pens ,1,-82.0453664,26.9297836,-80.41895989999999,25.1189869
+"Prospect Reef Resort, Tortola ","Dolphin Resort, Dominica ",1,-64.63327819999999,18.4334704,-61.4403695,15.4362912
+"Puget Sound, Pacific NW","Sea Pen, Puget Sound ",1,-122.4713352,47.7236535,-122.4713352,47.7236535
+Quinlan Marine Attractions ,Busch Gardens Tampa ,1,-96.13552949999999,32.9103998,-82.41949009999999,28.0372161
+Quinlan Marine Attractions ,"Dinnes, possibly Dolphin Connection ",1,-96.13552949999999,32.9103998,-80.9096457,24.7764696
+Quinlan Marine Attractions ,"Dinnes, probably Dolphin Connection ",1,-96.13552949999999,32.9103998,-80.9096457,24.7764696
+Quinlan Marine Attractions ,National Aquarium in Baltimore ,1,-96.13552949999999,32.9103998,-76.6082871,39.2850948
+Quinlan Marine Attractions ,SeaWorld ,1,-96.13552949999999,32.9103998,-98.69931509999999,29.4584176
+Quinlan Marine Attractions ,SeaWorld San Diego ,1,-96.13552949999999,32.9103998,-117.2266083,32.7647903
+"Quintana Beach, Texas",Texas MM Stranding Network ,1,-95.30827110000001,28.9333037,-94.8139686,29.2758286
+"Re-Capture, Virgin Islands ",Dolphin Research Center ,1,-109.4392971,37.6658236,-97.2067768,26.0781091
+"Redington Beach, Florida",Clearwater Marine Aquarium ,1,-82.81121399999999,27.8086364,-82.8191129,27.9768545
+Santini'sDolphin Research Center ,Brookfield Zoo ,1,-80.945509,24.766967,-87.8357137,41.8328916
+Sao Paulo Playcenter ,SeaWorld Aurora ,1,-46.5044526,-23.5660883,-81.36843999999999,41.34552
+Sea Life Park ,Dolphin Quest Hawaii ,1,-157.6631377,21.3131939,-155.889022,19.925505
+"Sea Pen, Grindavik Harbor ",Dolfinarium Harderwijk ,1,-22.4383818,63.8441808,5.6171798,52.3541391
+"Sea Pen, Puget Sound ",SeaWorld San Diego ,1,-122.4713352,47.7236535,-117.2266083,32.7647903
+"Sea Pen, Yukon Harbor",Seattle Marine Aquarium ,1,-122.531248,47.531908,-122.1950467,47.53140519999999
+"Sea World Marine Institue, Keys ",SeaWorld Orlando ,1,-117.2330895,32.7689827,-81.4617047,28.4114555
+"Sea World, Long Key ",SeaWorld Orlando ,1,-81.4617047,28.4114555,-81.4617047,28.4114555
+Sealand of Cape Cod ,Mystic Aquarium ,1,-70.29624079999999,41.6687897,-71.9532523,41.373346
+Seattle Aquarium ,SeaWorld San Diego ,1,-122.3429996,47.607445,-117.2266083,32.7647903
+Seattle Marine Aquarium ,Windsor Safari Park ,1,-122.1950467,47.53140519999999,-0.6187676999999999,51.4667179
+SeaWorld ,SeaWorld Aurora ,1,-98.69931509999999,29.4584176,-81.36843999999999,41.34552
+SeaWorld ,SeaWorld San Diego ,1,-98.69931509999999,29.4584176,-117.2266083,32.7647903
+SeaWorld Aurora,SeaWorld San Diego ,1,-81.36843999999999,41.34552,-117.2266083,32.7647903
+SeaWorld Aurora,SeaWorld San Diego ,1,-81.36843999999999,41.34552,-117.2266083,32.7647903
+SeaWorld Aurora ,National Aquarium in Baltimore ,1,-81.36843999999999,41.34552,-76.6082871,39.2850948
+SeaWorld Aurora ,SeaWorld Orlando,1,-81.36843999999999,41.34552,-81.4617047,28.4114555
+SeaWorld Aurora ,SeaWorld Orlando ,1,-81.36843999999999,41.34552,-81.4617047,28.4114555
+SeaWorld Aurora ,SeaWorld San Antonio ,1,-81.36843999999999,41.34552,-98.69931509999999,29.4584176
+SeaWorld Aurora ,SeaWorld San Diego ,1,-81.36843999999999,41.34552,-117.2266083,32.7647903
+SeaWorld Aurora ,SeaWorld San Diego ,1,-81.36843999999999,41.34552,-117.2266083,32.7647903
+Seaworld Orlando,Discovery Cove ,1,-81.4617047,28.4114555,-81.462485,28.4050098
+SeaWorld Orlando,Busch Gardens Tampa ,1,-81.4617047,28.4114555,-82.41949009999999,28.0372161
+SeaWorld Orlando,Discovery Cove ,1,-81.4617047,28.4114555,-81.462485,28.4050098
+SeaWorld Orlando,Marineland of Canada ,1,-81.4617047,28.4114555,-79.07060059999999,43.0649729
+SeaWorld Orlando,New England Aquarium ,1,-81.4617047,28.4114555,-71.0497542,42.3591346
+SeaWorld Orlando,SeaWorld Aurora ,1,-81.4617047,28.4114555,-81.36843999999999,41.34552
+SeaWorld Orlando,Naval Base Point Loma,1,-81.4617047,28.4114555,-117.2400346,32.6889711
+SeaWorld Orlando,Naval Base Point Loma,1,-81.4617047,28.4114555,-117.2400346,32.6889711
+SeaWorld Orlando ,"Avalon Beach, Florida",1,-81.4617047,28.4114555,-87.1016345,30.5301956
+SeaWorld Orlando ,Clearwater Marine Aquarium ,1,-81.4617047,28.4114555,-82.8191129,27.9768545
+SeaWorld Orlando ,Dolphin Connection ,1,-81.4617047,28.4114555,-80.9096457,24.7764696
+SeaWorld Orlando ,Dolphin Research Center ,1,-81.4617047,28.4114555,-97.2067768,26.0781091
+SeaWorld Orlando ,SeaWorld Orlando ,1,-81.4617047,28.4114555,-81.4617047,28.4114555
+SeaWorld Orlando ,SeaWorld San Diego ,1,-81.4617047,28.4114555,-117.2266083,32.7647903
+SeaWorld Orlando ,Naval Base Point Loma,1,-81.4617047,28.4114555,-117.2400346,32.6889711
+SeaWorld Orlando ,Clearwater Marine Aquarium ,1,-81.4617047,28.4114555,-82.8191129,27.9768545
+SeaWorld Orlando ,Discovery Cove ,1,-81.4617047,28.4114555,-81.462485,28.4050098
+SeaWorld San Antonio,Discovery Cove Orlando ,1,-98.69931509999999,29.4584176,-81.462485,28.4050098
+SeaWorld San Antonio,Miami Seaquarium ,1,-98.69931509999999,29.4584176,-80.1648518,25.7342958
+SeaWorld San Antonio,Mirage Dolphin Habitat ,1,-98.69931509999999,29.4584176,-115.1784079,36.1203291
+SeaWorld San Antonio ,Busch Gardens Tampa ,1,-98.69931509999999,29.4584176,-82.41949009999999,28.0372161
+SeaWorld San Antonio ,Discovery Cove ,1,-98.69931509999999,29.4584176,-81.462485,28.4050098
+SeaWorld San Antonio ,Minnesota Zoo ,1,-98.69931509999999,29.4584176,-93.19667179999999,44.767807
+SeaWorld San Antonio ,SeaWorld Aurora ,1,-98.69931509999999,29.4584176,-81.36843999999999,41.34552
+SeaWorld San Antonio ,Shedd Aquarium ,1,-98.69931509999999,29.4584176,-87.614038,41.8675726
+SeaWorld San Antonio ,SeaWorld Aurora ,1,-98.69931509999999,29.4584176,-81.36843999999999,41.34552
+SeaWorld San Diego,Mirage Dolphin Habitat ,1,-117.2266083,32.7647903,-115.1784079,36.1203291
+SeaWorld San Diego,"Sea World Marine Institue, Keys ",1,-117.2266083,32.7647903,-117.2330895,32.7689827
+SeaWorld San Diego,SeaWorld Aurora ,1,-117.2266083,32.7647903,-81.36843999999999,41.34552
+SeaWorld San Diego,Six Flags Discovery Kingdom ,1,-117.2266083,32.7647903,-122.2340155,38.13819549999999
+SeaWorld San Diego ,Busch Gardens Tampa ,1,-117.2266083,32.7647903,-82.41949009999999,28.0372161
+SeaWorld San Diego ,Gulfarium ,1,-117.2266083,32.7647903,-86.593546,30.394468
+SeaWorld San Diego ,Point Defiance Zoo ,1,-117.2266083,32.7647903,-122.5208211,47.3048779
+SeaWorld San Diego ,SeaWorld Aurora ,1,-117.2266083,32.7647903,-81.36843999999999,41.34552
+SeaWorld San Diego ,Six Flags Discovery Kingdom ,1,-117.2266083,32.7647903,-122.2340155,38.13819549999999
+Seven Seas Texas ,Marineland of Canada ,1,-94.9855302,29.174943,-79.07060059999999,43.0649729
+Shark WorldAquatarium ,Marineland of Florida ,1,-75.6826741,44.5876895,-81.213398,29.6688614
+Shedd Aquarium,Georgia Aquarium ,1,-87.614038,41.8675726,-84.3951098,33.763382
+Shedd Aquarium ,Indianapolis Zoo ,1,-87.614038,41.8675726,-86.18073,39.767442
+Shedd Aquarium ,Point Defiance Zoo ,1,-87.614038,41.8675726,-122.5208211,47.3048779
+"Shell Island, Florida",SeaWorld Orlando ,1,-85.6915955,30.0960368,-81.4617047,28.4114555
+Six Flags Discovery Kingdom,Six Flags Great Adventure ,1,-122.2340155,38.13819549999999,-74.4402149,40.1370678
+Six Flags Discovery Kingdom,Six Flags Worlds of Adventure ,1,-122.2340155,38.13819549999999,-94.4867155,39.1767262
+Six Flags Discovery Kingdom ,Gulf of Mexico,1,-122.2340155,38.13819549999999,-90.065918,25.304304
+Six Flags Discovery Kingdom ,SeaWorld San Diego ,1,-122.2340155,38.13819549999999,-117.2266083,32.7647903
+Six Flags Over Texas ,Mirage Dolphin Habitat ,1,-97.0711714,32.7551732,-115.1784079,36.1203291
+Six Flags Worlds of Adventure ,Six Flags Discovery Kingdom ,1,-94.4867155,39.1767262,-122.2340155,38.13819549999999
+"South Padre Island, Texas",UT Pan-Am Coastal Studies Lab ,1,-97.16812569999999,26.1118401,-97.15857109999999,26.0752042
+Sugarloaf Dolphin Sanctuary ,Dolphin Research Center ,1,-81.5271302,24.6583304,-97.2067768,26.0781091
+Sugarloaf Dolphin Sanctuary ,Florida Keys ,1,-81.5271302,24.6583304,-81.5357506,25.0273356
+Sugarloaf Dolphin Sanctuary ,Near Key West ,1,-81.5271302,24.6583304,-81.7799871,24.5550593
+Sugarloaf Dolphin Sanctuary ,Naval Base Point Loma,1,-81.5271302,24.6583304,-117.2400346,32.6889711
+"Tampa Bay, Florida",Clearwater Marine Aquarium ,1,-82.5436722,27.763383,-82.8191129,27.9768545
+Texas Marine Mammal Stranding Network ,Brookfield Zoo ,1,-94.8139686,29.2758286,-87.8357137,41.8328916
+Texas MM Stranding Network ,SeaWorld San Antonio ,1,-94.8139686,29.2758286,-98.69931509999999,29.4584176
+Texas MM Stranding Network ,Six Flags Discovery Kingdom ,1,-94.8139686,29.2758286,-122.2340155,38.13819549999999
+Texas State Aquarium ,TMMSN Galveston ,1,-97.3923171,27.8140747,-94.8139686,29.2758286
+"Texas State Aquarium, Sea Lab ",SeaWorld San Antonio ,1,-97.3923171,27.8140747,-98.69931509999999,29.4584176
+"Texas, Gulf Coast",TMMSN Moody Gardens ,1,-99.9018131,31.9685988,-94.8139686,29.2758286
+Gulf of Mexico,Brookfield Zoo ,1,-90.065918,25.304304,-87.8357137,41.8328916
+Theater of the Sea ,Dolphin Research Center ,1,-71.5627531,41.3770733,-97.2067768,26.0781091
+Theater of the Sea ,"Hull Aquarium, Mass. ",1,-71.5627531,41.3770733,-70.88033209999999,42.1984989
+Theater of the Sea ,Ocean Reef Club ,1,-71.5627531,41.3770733,-74.6029956,39.2696503
+Theater of the Sea ,SeaWorld Orlando ,1,-71.5627531,41.3770733,-81.4617047,28.4114555
+"Three Sisters Island, Florida",SeaWorld Orlando ,1,-82.2492608,26.7645136,-81.4617047,28.4114555
+TMMSN Moody Gardens ,Theater of the Sea ,1,-94.8139686,29.2758286,-71.5627531,41.3770733
+Naval Base Point Loma,Clearwater Marine Aquarium ,1,-117.2400346,32.6889711,-82.8191129,27.9768545
+Naval Base Point Loma,Dolphin Connection ,1,-117.2400346,32.6889711,-80.9096457,24.7764696
+Naval Base Point Loma,Dolphin Research Center ,1,-117.2400346,32.6889711,-97.2067768,26.0781091
+Naval Base Point Loma,EPCOT Center ,1,-117.2400346,32.6889711,-81.549404,28.374694
+Naval Base Point Loma,EPCOT Living Seas ,1,-117.2400346,32.6889711,-81.5507341,28.3748884
+Naval Base Point Loma,Sea Life Park ,1,-117.2400346,32.6889711,-157.6631377,21.3131939
+Naval Base Point Loma,Sea Life Park ,1,-117.2400346,32.6889711,-157.6631377,21.3131939
+UT Pan-Am Coastal Studies Lab ,SeaWorld San Antonio ,1,-97.15857109999999,26.0752042,-98.69931509999999,29.4584176
+UT Pan-Am Coastal Studies Lab ,TMMSN Galveston ,1,-97.15857109999999,26.0752042,-94.8139686,29.2758286
+Utrish ,La Feria de Chapultapec ,1,37.3864462,44.7597663,-99.19622749999999,19.4146944
+Utrish ,La Feria de Chapultepec ,1,37.3864462,44.7597663,-99.19622749999999,19.4146944
+Vancouver Aquarium ,SeaWorld San Antonio ,1,-123.1309293,49.3007961,-98.69931509999999,29.4584176
+"Vero Beach, Florida",Mote Marine Laboratory ,1,-80.39727359999999,27.6386434,-82.57747379999999,27.3328279
+"Washington, US",Seattle Marine Aquarium ,1,-120.7401385,47.7510741,-122.1950467,47.53140519999999
+West Edmonton Mall ,Theater of the Sea ,1,-113.6241906,53.5225151,-71.5627531,41.3770733
+"White Sea, Russia",Utrish ,1,39.7343119,65.8822357,37.3864462,44.7597663
+Windsor Safari Park ,SeaWorld Orlando ,1,-0.6187676999999999,51.4667179,-81.4617047,28.4114555
+Windsor Safari Park ,SeaWorld San Diego ,1,-0.6187676999999999,51.4667179,-117.2266083,32.7647903

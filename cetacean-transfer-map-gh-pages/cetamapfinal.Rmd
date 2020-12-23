@@ -1,0 +1,220 @@
+---
+title: "Cetacean Map"
+author: "Gordon Blasco"
+output: html_document
+---
+
+```{r setup_chunk, echo = F}
+# Set some options
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE,
+                      fig.width = 5,
+                      fig.height = 3)
+```
+#### Final product will be an interactive leaflet map showing a geocoded network
+```{r, echo=FALSE}
+library(tidyverse)
+library(ggmap) 
+library(geosphere)
+library(leaflet)
+
+geo_df <- read_csv("geo_df2.csv")
+
+
+flows <- gcIntermediate(geo_df[,4:5], geo_df[,6:7], sp = TRUE, addStartEnd = TRUE, breakAtDateLine=TRUE)
+flows$counts <- geo_df$counts
+flows$origins <- geo_df$origins
+flows$destinations <- geo_df$destinations
+
+hover <- paste0(flows$origins, " to ", 
+                flows$destinations, ': ', 
+                as.character(flows$counts))
+
+
+# Generate interactive map with leaflet
+map <- leaflet(width = "100%", height = 500) %>%
+  addProviderTiles('CartoDB.Positron') %>%
+  addPolylines(data = flows, weight = ~counts/9, label = hover, 
+               group = ~origins, color = 'teal') %>% 
+  setView(-98.899177, 30.773535, zoom = 3)
+
+map 
+```
+
+
+### Packages Required
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+library(ggmap) 
+library(geosphere)
+library(leaflet)
+
+```
+
+### Register your Google API key
+```{r, eval=FALSE}
+myAPI <- read_file("INSERT FILE PATH HERE")
+register_google(key = myAPI)
+```
+```{r, include=FALSE}
+myAPI <- read_file("C:\\Users\\gordo_000\\Google Drive\\Working\\R analysis\\API keys\\reddish_api.txt")
+register_google(key = myAPI)
+```
+
+### Import and clean the data.
+```{r}
+suppressMessages(
+ceta <- read_csv("captive_cetacean.csv")
+)
+ceta_simple <- ceta %>%
+  filter(region == 'US') %>% 
+  filter(transfers != 'NA')
+
+#Cut transfers column at the ' to ' in order to break destinations into different rows. 
+ceta_transfer <- ceta_simple %>% 
+  mutate(tran_cut = str_split(transfers, ' to ')) %>% 
+  unnest(tran_cut)
+ceta_transfer$tran_cut <- str_replace_all(ceta_transfer$tran_cut, "\\(.*\\)", "")
+
+destin <- ceta_transfer %>% 
+  select(tran_cut) %>% 
+  unique() %>% 
+  arrange(tran_cut)
+
+```
+
+
+```{r, include = FALSE}
+###Cleaning the dataset.
+#This data has many typos and inconsistant formatting. So, many of the issues in the text cannot be #systematically fixed. I took a line by line approach to consistanty format the columns.
+ceta_transfer2 <- ceta_transfer %>% 
+  mutate(tran_cut = str_replace(tran_cut, "Navy", "MMP")) %>%
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, 'MMP'), "Naval Base Point Loma")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "\\?", "")) %>%
+  mutate(tran_cut = str_replace(tran_cut, ", Unknown", "")) %>%
+  mutate(tran_cut = str_replace(tran_cut, "\\($", "")) %>%
+  mutate(tran_cut = str_replace(tran_cut, "\\ $", "")) %>%
+  mutate(tran_cut = str_replace(tran_cut, "California Pacific Ocean", "Pacific Ocean")) %>%
+  mutate(tran_cut = str_replace(tran_cut, "California, unknown beach", "Pacific Ocean")) %>%
+  filter(!str_detect(tran_cut, 'Unknown History')) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, 'Dinnes'), "Dolphin Connection, Florida")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, 'Dolphin Connection'), "Dolphin Connection, Florida")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, 'Discovery Cove'), "Discovery Cove Orlando")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, 'Dolfinarium Harderwijk'), "Dolfinarium Harderwijk")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "i'i", "ii")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "i'I", "ii")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Dolphins Plus"), "Dolphins Plus")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "Eastern Florida", "")) %>%
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "EPCOT"), "EPCOT")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "Floating Pen,", "")) %>%
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Gulf of Mexico"), "Gulf of Mexico")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Gulfarium"), "Gulfarium")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "Holding, probably ", "")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "Unknown, probably ", "")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "MAP", "Marine Animal Productions")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "Holding, ", "")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Unknown"), "")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "North Atlantic"), "North Atlantic")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "BC", "British Columbia")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Pacific Ocean"), "Pacific Ocean")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Atlantic Ocean"), "Atlantic Ocean")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Holding"), "")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "National Aquarium"), "National Aquarium in Baltimore")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "Seaworld", "SeaWorld")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "SeaWorld$"), "SeaWorld Orlando")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "6dy"), "")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "/", " ")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "Sea Pen, ", "")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Sea World"), "SeaWorld")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "TMMSN"), "TMMSN")) %>% 
+  mutate(tran_cut = str_replace(tran_cut, "\\*", "")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Sound"), "Puget Sound")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Indian River"), "Indian River, Florida")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Japan"), "Japan")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Florida Keys"), "Florida")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "holding"), "")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "pen"), "")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "unknown"), "Florida")) %>% 
+  mutate(tran_cut = replace(tran_cut, str_detect(tran_cut, "Hatakejiriwan"), "Japan")) %>%
+  filter(tran_cut != '')
+```
+
+### Use a for loop to make a set of origins and destinations for each Cetacean.
+
+Because each location the cetacean was transfered to was unnested into a new row the loop can look at the next observation location and check if the ID of that cetacean is the same. It two rows have the same cetacean ID then we know this was the next stop in that animals journey. Those rows will be made into one with a column for the origin of that trip and destination. We will get the lat and long of both of these and plot an arched line between them in the next few steps.
+
+```{r}
+x <- ceta_transfer2
+y <- nrow(x) - 1
+x$end <- 'NA'
+
+# Create an origin and destination column 
+for (i in 1:y) {
+  if(x$id[i] == x$id[i+1]){
+  x$end[i] <- x$tran_cut[i+1]
+  } else{
+    x$end[i] = 'NA'
+  }
+}
+
+
+# Summarize the data
+trans_df <- x %>% 
+  filter(end != 'NA') %>% 
+  rename(origins = tran_cut,
+         destinations = end) %>% 
+  group_by(origins, destinations) %>% 
+  summarize(counts = n()) %>% 
+  ungroup() %>% 
+  arrange(desc(counts))
+```
+
+
+### Geocode the data using the ggmaps package and a google API. 
+```{r, eval=FALSE}
+geo_df <- trans_df
+geo1_df <- mutate_geocode(geo_df, origins)
+geo_df <- geo1_df %>% 
+  rename(
+    lat_o = lat,
+    lon_o = lon
+  )
+
+geo2_df <- mutate_geocode(geo_df, destinations)
+geo_df <- geo2_df %>% 
+  rename(
+    lat_d = lat,
+    lon_d = lon
+  ) %>% 
+  filter(lon_d != 'NA') %>% 
+  filter(lon_o != 'NA')
+```
+
+```{r, include=FALSE}
+geo_df <- read_csv("geo_df2.csv")
+```
+### Use the geosphere package to generate arched lines between origins and destinations on the map. 
+```{r}
+flows <- gcIntermediate(geo_df[,4:5], geo_df[,6:7], sp = TRUE, addStartEnd = TRUE, breakAtDateLine=TRUE)
+flows$counts <- geo_df$counts
+flows$origins <- geo_df$origins
+flows$destinations <- geo_df$destinations
+
+hover <- paste0(flows$origins, " to ", 
+                flows$destinations, ': ', 
+                as.character(flows$counts))
+
+```
+### Make an interactive map using the leaflet package.
+```{r}
+# Generate interactive map with leaflet
+map <- leaflet(width = "100%", height = 500) %>%
+  addProviderTiles('CartoDB.Positron') %>%
+  addPolylines(data = flows, weight = ~counts/9, label = hover, 
+               group = ~origins, color = 'teal') %>% 
+  setView(-98.899177, 30.773535, zoom = 3)
+```
+### Transfers of Cetaceans in Captivity  (1946 - 2017)
+```{r,echo=FALSE}
+map
+```
