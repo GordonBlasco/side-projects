@@ -1,0 +1,185 @@
+---
+title: "Reddish Egret West Coast Range"
+author: "Gordon Blasco"
+date: "December 26, 2018"
+output: html_document
+---
+##Background
+
+In th 
+
+
+##Code and analysis 
+Libraries required for this are the tidyverse, lubridate, ggmap, and auk. 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(auk)
+library(tidyverse)
+library(lubridate)
+library(ggmap) # Must use most up to date version of ggmap from github
+
+#read in google cloud api key from file on computer 
+myAPI <- read_file("C:\\Users\\gordo_000\\Google Drive\\Working\\R analysis\\API keys\\reddish_api.txt")
+register_google(key = myAPI) # API key set to reddish-egret-range project on the google cloud service. 
+
+```
+
+Getting data from ebird must be done as request that takes a few days to process. I chose to filter my data request for all sigtings of the reddish egret from 2016 to 2018. 
+```{r}
+# import the reddish egret data using ebirds auk package
+# Because data was prefiltered there is no need to use any of auk's filtering functions. 
+input_file <- "reddish_data.txt" 
+output_file <- "ebd_filtered_grja.txt"
+ebird_data <- input_file %>% 
+  auk_ebd() %>% 
+  auk_filter(file = output_file, overwrite = TRUE) %>% 
+  read_ebd()
+
+# Make a clean data set for use in analysis 
+
+reddish_tidy <- ebird_data %>% 
+  select(latitude, longitude, observation_date, observation_count) %>% 
+  mutate(year = year(observation_date)) %>% 
+  rename(lat = latitude, 
+         lon = longitude,
+         date = observation_date,
+         count = observation_count) 
+
+reddish_tidy$count[reddish_tidy$count == "X"] <- 1
+reddish_tidy$count <- as.numeric(reddish_tidy$count)
+
+# Filter for only the highest count for each day and in each location.
+# Round lat and lon to .01 place
+reddish_west <- reddish_tidy
+reddish_west$lat <- round(reddish_west$lat, 2) 
+reddish_west$lon <- round(reddish_west$lon, 2)
+
+# Filter for highest count per day within .01 of lat and lon measurement.
+reddish_west <- reddish_west %>% 
+  mutate(latlon = paste(lat,lon,sep="-")) %>% 
+  group_by(latlon) %>% 
+  group_by(date) %>% 
+  filter(count != max(count)) %>% 
+  distinct() %>% 
+  filter(lon < -118) # remove all gulf of mexico observations. 
+
+```
+
+To get an idea for how much data has been entered in eBird a look at the total yearly 
+```{r}
+year_tot <- reddish_tidy %>% 
+  group_by(year) %>% 
+  summarize(
+    count = sum(count))
+
+year_totals_plot <- ggplot(year_tot, aes(x = year, y = count)) +
+  geom_line() +
+  geom_point() +
+  xlab("Year") +
+  ylab("Number of Observations") +
+  ggtitle("Number of Reddish Egrets Entered in eBird") +
+  theme_classic()
+
+year_totals_plot
+
+```
+
+
+```{r, echo=FALSE}
+# Highest west coast latitude per year chart
+
+lat_year <- reddish_tidy %>% 
+  group_by(year) %>% 
+  summarize(
+    lat = max(lat))
+
+lat_year_plot <- ggplot(lat_year, aes(x = year, y = lat)) +
+  geom_line() +
+  geom_point() +
+  xlab("Year") +
+  ylab("Latitude") +
+  ggtitle("Highest Latitude Reddish Egret Sighting by Year") +
+  theme_classic()
+
+lat_year_plot
+
+
+```
+
+```{r}
+# Yearly density plots
+
+Case_form <- reddish_tidy %>% 
+  uncount(count)
+
+red_1995 <- Case_form %>% 
+  filter(year >= 1995) 
+
+red_1995_mean <- red_1995 %>% 
+  group_by(year) %>% 
+  summarize(
+    mean = mean(lat))
+
+yearly_density_plot <- ggplot(red_1995, aes(x = lat)) +
+  geom_density(aes(group=year, colour=year, fill=year), alpha=0.3) +
+  theme_classic() +
+  geom_vline(data=red_1995_mean, aes(xintercept=mean, color=year),
+             linetype="dashed") +
+  scale_y_continuous(expand = c(0,0)) +
+  xlab("Latitude") +
+  ylab("Density") +
+  ggtitle("Latitude Density for Reddish Egret Sightings by Year") +
+  theme_classic()
+
+yearly_density_plot
+```
+
+```{r}
+Case_form <- reddish_west %>% 
+  uncount(count)
+
+red_west_1995 <- Case_form %>% 
+  filter(year >= 2013) 
+
+red_west_1995_mean <- red_west_1995 %>% 
+  group_by(year) %>% 
+  summarize(
+    mean = mean(lat))
+
+yearly_west_density_plot <- ggplot(red_west_1995, aes(x = lat)) +
+  geom_density(aes(group=year, colour=year, fill=year), alpha=0.3) +
+  theme_classic() +
+  geom_vline(data=red_west_1995_mean, aes(xintercept=mean, color=year),
+             linetype="dashed") +
+  scale_y_continuous(expand = c(0,0)) +
+  xlab("Latitude") +
+  ylab("Density") +
+  ggtitle("Latitude Density for Reddish Egret Sightings by Year (west)") +
+  theme_classic()
+
+yearly_west_density_plot
+```
+
+
+```{r, warning=FALSE, message=FALSE}
+# West coast map
+
+get_googlemap("san diego", zoom = 6, maptype = "satellite") %>% ggmap() +
+  geom_point(aes(x = lon, y = lat), data = reddish_tidy, color = "red", size = 2, alpha = .5) + 
+  xlab("Longitude") + 
+  ylab("Latitude") +
+  ggtitle("Reddish Egret West Coast Range")
+```
+
+```{r, warning=FALSE, message=FALSE}
+# World map
+
+get_googlemap("dallas", zoom = 4, maptype = "satellite") %>% ggmap() +
+  geom_point(aes(x = longitude, y = latitude), data = ebird_data, color = "red", size = 2, alpha = .5) + 
+  xlab("Longitude") + 
+  ylab("Latitude") +
+  ggtitle("Reddish Egret Global Range")
+```
+
+
